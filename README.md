@@ -1,6 +1,7 @@
-Bundle 1
+# Bundle 1
 
-Exercise 1
+## Exercise 1
+```bash
  git init
    28  git branch
    29  git branch -m master main
@@ -31,4 +32,4 @@ Exercise 1
    54  git branch test
    55  git branch
    56  git branch --delete test
-
+```
