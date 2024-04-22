@@ -903,3 +903,338 @@ To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
+
+# Bundle 4
+
+## Exercises 1
+``` bash
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git remote add git-copy https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git add .
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git commit -m "home in git-copy repo"
+[main 9812d9b] home in git-copy repo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.87 KiB | 18.00 KiB/s, done.
+From https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions
+   5123b1d..f6b3503  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 120 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 120 insertions(+)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 619 bytes | 309.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+   f6b3503..f48284c  main -> main
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy ft/team-page
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (41/41), 10.76 KiB | 1.54 MiB/s, done.
+Total 41 (delta 16), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (16/16), done.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2/pull/new/ft/team-page
+remote:
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ * [new branch]      ft/team-page -> ft/team-page
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy main
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy 
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull
+Already up to date.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git add .
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git commit -m "new changes from git-copy repo"
+[main a3c5438] new changes from git-copy repo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+   f48284c..a3c5438  main -> main
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull git-copy
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 887 bytes | 2.00 KiB/s, done.
+From https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ * [new branch]      main       -> git-copy/main
+You asked to pull from the remote 'git-copy', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git status git-copy
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull git-copy main
+From https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git add home.html
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git commit -m "first commit "
+[main f37d59b] first commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy 
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git remote -v
+git-copy        https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2 (fetch)
+git-copy        https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2 (push)       
+origin  https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git (push)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+   a3c5438..f37d59b  main -> main
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull git-copy
+You asked to pull from the remote 'git-copy', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull git-copy main
+From https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ gti remote rm git-copy
+bash: gti: command not found
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git remote rm git-copy
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git remote add git-copy https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git add .
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git commit -m "git copy changes"
+[main 621d18d] git copy changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+   f37d59b..621d18d  main -> main
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git pull git-copy
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 1.68 KiB | 18.00 KiB/s, done.
+From https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ * [new branch]      ft/team-page -> git-copy/ft/team-page
+ * [new branch]      main         -> git-copy/main
+You asked to pull from the remote 'git-copy', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push git-copy
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The Gym Git& GitHub (main)
+$ git push -f git-copy
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (25/25), 8.45 KiB | 2.11 MiB/s, done.
+Total 25 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), completed with 2 local objects.
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions2
+ + ea61615...621d18d main -> main (forced update)
+```
