@@ -783,3 +783,123 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
    035691f..91a0a59  ft/team-page -> ft/team-page
 ```
+## Exercises 2
+```bash
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/faq-page)
+$ git chckout -b ft/home-page-redesign
+git: 'chckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (main)
+$ git add .
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (main)
+$ git commit -m "changes in main"
+[main 00f3686] changes in main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (main)
+$ git push
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another 
+repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.        
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 5.06 KiB | 56.00 KiB/s, done.
+From https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions
+   5953e47..fbcf881  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 546 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 546 insertions(+)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 587 bytes | 293.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0      
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+   fbcf881..5123b1d  main -> main
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (main)
+$ git checkout  ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/home-page-redesign)
+$ git rebase origin/main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/home-page-redesign)
+$ git add .
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/home-page-redesign)
+$ git commit -m "new changes in homepage"
+[ft/home-page-redesign 919b5ed] new changes in homepage
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign  
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Nicole@DESKTOP-NRC5VAI MINGW64 ~/Downloads/javascript/The 
+Gym Git& GitHub (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign 
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.30 KiB | 445.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/gloriaumutoni/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
